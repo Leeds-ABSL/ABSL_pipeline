@@ -9,12 +9,10 @@ If you find the scripts here useful in your research please cite:
 >Collection, pre-processing, and on-the-fly analysis of data for high-resolution, single-particle cryo-electron microscopy. 
 >Nature Protocols. xx:xx(xx-xx) doi: xxxxxxxxxxxxxxxxxxxxx
 
-## ABSL_micrograph_analysis.py and ABSL_micrograph_analysis_phase_plate.py
+## ABSL_micrograph_analysis.py
 These programs use the star file output by GCTF for analyzing image statistics.
 
-Both versions requrie the column \_rlnCtfMaxResolution to be present.  This is only written if eqiphase analysis is selected when GCTF is run if it is not present the program should produce and error.
-
-The phase shift version also requires the column \_rlnPhaseShift. So the option to calculate phase shift must also be specified in GCTF if this version is to be used.
+Both versions requrie the column \_rlnCtfMaxResolution to be present.  This is only written if eqiphase analysis is selected when GCTF is run if it is not present the program should produce and error.  If the column \_rlnPhaseShift is present the program will also do phase shift analyses.
 
 To run the script use the command:
 `./ABSL_micrograph_analysis --i <micrographs star file>`
@@ -57,10 +55,12 @@ Replace the pipliner.cpp in the `src/` directory of relion with this version and
 
 
 ## ABSL_OTF.sh
-This script is used at leeds to copy files from the different microscope systems to a central drive for storge and processing.  It is provided more as an example as the setup of any individual system will vary greatly.  
+This script is used at leeds to copy files from the different microscope systems to a central drive for storge and processing and run the above analysis scripts.  It is provided more as an example as the setup of any individual system will vary greatly.  
 
-Briefly, the script copies files to the approprite directories, runs ABSL_EP_CC_threshold.py and ABSL_micrograph_analysis.py and then waits 10 minutes before doing it again until the time has elapsed. 
+Briefly, the script copies files to the approprite directories, runs ABSL_EP_CC_threshold.py and ABSL_micrograph_analysis.py and then waits 30 seconds minutes before doing it again until the time has elapsed. 
 
+## EM_Pull_Files.ps1
+This is a windows power shell script that is used to transfer data from the Gatan detector control computer to the Leeds file system and porperly set it's access permissions.  This script is very specific to the Leeds system, a similar data transfer script may be necessary depending on the specific setup of an individual microscope and file system. 
 
 
 ## License information
