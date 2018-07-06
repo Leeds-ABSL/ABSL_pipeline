@@ -103,7 +103,7 @@ rsync -rutlDv "$src/" "$save_path"
 ln -s $save_path$ext "Raw_data/" &>/dev/null
 python $res_replace_path CtfFind/job003/micrographs_ctf.star
 python $mic_analysis_path --i CtfFind/job003/micrographs_ctf_CC0.5.star
-sleep 10
+sleep 30
 current_time=$(date +%s)
 done
 python $res_replace_path CtfFind/job003/micrographs_ctf.star
