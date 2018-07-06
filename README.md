@@ -7,7 +7,6 @@ If you find the scripts here useful in your research please cite:
 
 >Thompson RF, Iadanza MG, Rawson SD, Hesketh EL, Ranson NA. (2018) 
 >Collection, pre-processing, and on-the-fly analysis of data for high-resolution, single-particle cryo-electron microscopy. 
->Nature Protocols. xx:xx(xx-xx) doi: xxxxxxxxxxxxxxxxxxxxx
 
 ## ABSL_micrograph_analysis.py
 These program usse the star file output by GCTF for analyzing image statistics.
