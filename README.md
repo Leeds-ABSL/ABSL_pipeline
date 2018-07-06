@@ -59,7 +59,7 @@ This script is used at leeds to copy files from the different microscope systems
 Briefly, the script copies files to the approprite directories, runs ABSL_EP_CC_threshold.py and ABSL_micrograph_analysis.py and then waits 30 seconds minutes before doing it again until the time has elapsed. 
 
 ## EM_Pull_Files.ps1
-This is a windows power shell script that is used to transfer data from the Gatan detector control computer to the Leeds file system and porperly set it's access permissions.  This script is very specific to the Leeds system, a similar data transfer script may be necessary depending on the specific setup of an individual microscope and file system. 
+This is a windows power shell script that is used to transfer data from the Gatan detector control computer to the Leeds file system and porperly set its access permissions.  This script is very specific to the Leeds system, a similar data transfer script may be necessary depending on the specific setup of an individual microscope and file system. 
 
 
 ## License information
