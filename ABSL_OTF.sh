@@ -8,7 +8,7 @@
 # run micrograph_analysis script
 # cycle until completed 
 
-# Shaun Rawson
+# Shaun Rawson, Aiden Richmond
 # modified - Matt Iadanza - 2018/06
 
 # Astbury Biostructure Laboratory - University of Leeds
