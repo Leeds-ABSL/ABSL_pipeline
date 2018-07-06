@@ -10,9 +10,9 @@ If you find the scripts here useful in your research please cite:
 >Nature Protocols. xx:xx(xx-xx) doi: xxxxxxxxxxxxxxxxxxxxx
 
 ## ABSL_micrograph_analysis.py
-These programs use the star file output by GCTF for analyzing image statistics.
+These program usse the star file output by GCTF for analyzing image statistics.
 
-Both versions requrie the column \_rlnCtfMaxResolution to be present.  This is only written if eqiphase analysis is selected when GCTF is run if it is not present the program should produce and error.  If the column \_rlnPhaseShift is present the program will also do phase shift analyses.
+It requires the column \_rlnCtfMaxResolution to be present.  This is only written if eqiphase analysis is selected when GCTF is run if it is not present the program should produce and error.  If the column \_rlnPhaseShift is present, the program will also do phase shift analyses.
 
 To run the script use the command:
 `./ABSL_micrograph_analysis --i <micrographs star file>`
