@@ -68,7 +68,7 @@ This is a windows power shell script that is used to transfer data from the Gata
 ## ABSL_test_data.tar.gz
 
 This archive contains test data to run ABSL_micrograph_analysis.py and ABSL_EPA_CC_threshold.py.  Unpack the archive using the command
-`tar -xvf ABSL_test_data.tar.gz`.  The navigate into the ABSL_test_data directory and run either program on micrographs_gctf.star.
+`tar -xvf ABSL_test_data.tar.gz`.  Then navigate into the ABSL_test_data directory and run either program on micrographs_gctf.star.
 
 ## License information
 
