@@ -65,6 +65,10 @@ Briefly, the script copies files to the approprite directories, runs ABSL_EP_CC_
 ## EM_Pull_Files.ps1
 This is a windows power shell script that is used to transfer data from the Gatan detector control computer to the Leeds file system and porperly set its access permissions.  This script is very specific to the Leeds system, a similar data transfer script may be necessary depending on the specific setup of an individual microscope and file system. 
 
+## ABSL_test_data.tar.gz
+
+This archive contains test data to run ABSL_micrograph_analysis.py and ABSL_EPA_CC_threshold.py.  Unpack the archive using the command
+`tar -xvf ABSL_test_data.tar.gz`.  The navigate into the ABSL_test_data directory and run either program on micrographs_gctf.star.
 
 ## License information
 
