@@ -22,6 +22,8 @@ The filtering is rather simple - it functions as a lowpass filter with the value
 
 [https://twitter.com/mattiadanza/status/780380747286929408](https://twitter.com/mattiadanza/status/780380747286929408)
 
+The script should take less than 10 seconds to run, depending on the size of the input file, requires the following python modules (most are standard): sys, warnings, numpy, matplotlib.
+
 ## ABSL_EPA_CC_threshold.py
 Gctf estimates the resolution of a micrograph as the resolution at which the cross correlation coefficient (CCC) between the eqi-phase average and actual micrograph power spectrum falls to 0.  We feel this overestimates the resolution and prefer to use a CCC cutoff of 0.5.  EPA_CC_threshold.py reads the log files created by gCTF and then replaces the \_rlnMaxResolution column in Relion’s file micrographs_ctf.star with values determined using the 0.5 CCC value.
 
@@ -29,6 +31,8 @@ The script is run automatically by OTF.sh.  To run the script on its own use the
 `./GCTFscript.py <micrographs_ctf.star>`
 
 Use the optional flag `–CCC_cutoff <n>` to change the CCC cutoff from the default of 0.5, where “n” is the CCC cut off you would like to use.
+
+The script should take less than 10 seconds to run, depending on the size of the input file, and requires the following python modules (most are standard): optparse, sys, os, re, linechache, random, shutil, and numpy
 
 ## pipeliner.cpp
 The standard Relion installation will crash if used on the fly for datasets of several thousand micrographs. This is due to how Relion decides a job is finished and starts the next job.  The program looks for the output file it expects at the end of the job, waits 10s and then starts next job in schedule. When the output file contains 1000's of lines the time taken to write this file out can exceed 10s. If this happens the next step will run on a list of files which is empty - which crashes the pipeline.
