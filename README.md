@@ -9,9 +9,9 @@ If you find the scripts here useful in your research please cite:
 >Collection, pre-processing, and on-the-fly analysis of data for high-resolution, single-particle cryo-electron microscopy. 
 
 ## ABSL_micrograph_analysis.py
-These program usse the star file output by GCTF for analyzing image statistics.
+These programs use the star file output by gCTF for analyzing image statistics.
 
-It requires the column \_rlnCtfMaxResolution to be present.  This is only written if eqiphase analysis is selected when GCTF is run if it is not present the program should produce and error.  If the column \_rlnPhaseShift is present, the program will also do phase shift analyses.
+It requires the column \_rlnCtfMaxResolution to be present.  This it is not present the program should produce and error.  If the column \_rlnPhaseShift is present, the program will also do phase shift analyses.
 
 To run the script use the command:
 `./ABSL_micrograph_analysis --i <micrographs star file>`
@@ -22,7 +22,7 @@ The filtering is rather simple - it functions as a lowpass filter with the value
 
 [https://twitter.com/mattiadanza/status/780380747286929408](https://twitter.com/mattiadanza/status/780380747286929408)
 
-The script should take less than 10 seconds to run, depending on the size of the input file, requires the following python modules (most are standard): sys, warnings, numpy, matplotlib.
+The script should take less than 10 seconds to run, depending on the size of the input file, required the following python modules (most are standard): sys, warnings, numpy, matplotlib.
 
 ## ABSL_EPA_CC_threshold.py
 Gctf estimates the resolution of a micrograph as the resolution at which the cross correlation coefficient (CCC) between the eqi-phase average and actual micrograph power spectrum falls to 0.  We feel this overestimates the resolution and prefer to use a CCC cutoff of 0.5.  EPA_CC_threshold.py reads the log files created by gCTF and then replaces the \_rlnMaxResolution column in Relion’s file micrographs_ctf.star with values determined using the 0.5 CCC value.
